@@ -22,7 +22,7 @@ function auth($log, $pas) {
 	return true;
 }
 
-if (isset($_POST["log1"]) && !empty($_POST["log1"]) &&  isset($_POST["log2"]) && !empty($_POST["log2"]) &&  isset($_POST["pas1"]) && !empty($_POST["pas1"]) &&  isset($_POST["pas2"]) && !empty($_POST["pas2"]))
+if (isset($_POST["loggin_1"]) && !empty($_POST["loggin_1"]) &&  isset($_POST["log2"]) && !empty($_POST["log2"]) &&  isset($_POST["pas1"]) && !empty($_POST["pas1"]) &&  isset($_POST["pas2"]) && !empty($_POST["pas2"]))
 {
 	if (auth($_POST["log1"], $_POST["pas1"]) && auth($_POST["log2"], $_POST["pas2"]))
 	{

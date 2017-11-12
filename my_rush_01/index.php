@@ -14,10 +14,15 @@
 				echo "creating Playfield";
 				$pf = new Playfield("Player1", "Player2");
 				$pf->Show();
+				for ($i=1; $i < 3; $i++) { 
+					for ($j=1; $j < 4; $j++) { 
+		echo "\n".$pf->player[$i]->ship[$j]->getX().' '.$pf->player[$i]->ship[$j]->getY()."\n";
+					}
+				}
 				for ($i = 1; $i < 151; $i++) { 
 					for ($j = 0; $j < 101; $j++) { 
 						if($pf->isCellWithShip($i, $j))
-							echo $i.' '.$j.'\n';
+							echo "\n".$i.' '.$j."\n";
 					}
 				}
 	?>
@@ -50,7 +55,29 @@
 					<div class="Enterprise"><img id="Enterprise" src="./Textures/img3.png" width="100" height="50"></div>
 	  			</div>
 			</div>
+			<table >
+				<?php
 
+				$i = 0;
+				while($i < 100)
+				{
+					$j = 0;
+					echo "<tr>";
+					while($j < 150)
+					{
+						if($pf->isCellWithShip($j,$i))
+							echo "<td style=\"background: red; box-shadow: 1px 0px 20px 12px red;\" id=\"$i$j\"></td>";
+						#else if ($p2->x() == $j && $p2->y() == $i)
+						#	echo "<td style=\"background: blue; box-shadow: 1px 0px 20px 12px blue;\" id=\"$i$j\"></td>";
+						else
+							echo "<td id=\"$i$j\"></td>";
+						$j++;
+					}
+					$i++;
+					echo "</tr>";
+				}
+			?>
+			</table>
 			<div class="login_2">
 				<br>
 				<p>Player_2: <?php echo $_SESSION["login_2"]." GREEN"; ?></p>

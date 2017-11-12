@@ -29,12 +29,12 @@ class NormalShip extends BaseShip
 		public 	function isShipCell($x, $y)
 	{
 		if ($this->dir == 1 || $this->dir == 3) {
-			if (abs($this->x - $x) < 1 && abs($this->y - $y) < 3) {
+			if (abs(intval($this->x) - intval($x)) < 1 && abs(intval($this->y) - intval($y)) < 3) {
 				return true;
 			}
 		}
 		else {
-			if (abs($this->x - $x) < 3 && abs($this->y - $y) < 1) {
+			if (abs(intval($this->x) - intval($x)) < 3 && abs(intval($this->y) - intval($y)) < 1) {
 				return true;
 			}
 		}

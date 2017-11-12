@@ -29,12 +29,12 @@ class BigShip extends BaseShip
 	public 	function isShipCell($x, $y)
 	{
 		if ($this->dir == 1 || $this->dir == 3) {
-			if (abs($this->x - $x) < 2 && abs($this->y - $y) < 5) {
+			if (abs(intval($this->x) - intval($x)) < 2 && abs(intval($this->y) - intval($y)) < 5) {
 				return true;
 			}
 		}
 		else {
-			if (abs($this->x - $x) < 5 && abs($this->y - $y) < 2) {
+			if (abs(intval($this->x) - intval($x)) < 5 && abs(intval($this->y) - intval($y)) < 2) {
 				return true;
 			}
 		}

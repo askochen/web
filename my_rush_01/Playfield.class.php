@@ -51,11 +51,11 @@ class Playfield
 		}
 	}
 
-	public function isCellWithShip($i, $j)
+	public function isCellWithShip($index_i, $index_j)
 	{
 		for ($i = 1; $i < 3; $i++) { 
 			for ($j = 1; $j < 4; $j++) { 
-				if ($this->player[$i]->ship[$j]->isShipCell($i, $j)) {
+				if ($this->player[$i]->ship[$j]->isShipCell($index_i, $index_j)) {
 					return true;
 				}
 			}
