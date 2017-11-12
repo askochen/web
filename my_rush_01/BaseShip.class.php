@@ -16,7 +16,7 @@ abstract class BaseShip
 		$this->setPP();
 		$this->setHP();
 		$this->setSpeed();
-		this->setWeapon();
+		$this->setWeapon();
 	}
 	protected function initData()
 	{
@@ -82,7 +82,7 @@ abstract class BaseShip
 	}
 	public function Shoot()
 	{
-		$playfield = $this->player->playfield
+		$playfield = $this->player->playfield;
 		foreach ($playfield->player as $key => $value) {
 			if ($value->getName() !== $this->name ) {
 				for ($i = 1; $i < 4; $i++) { 
@@ -90,22 +90,22 @@ abstract class BaseShip
 					$y = $value->ship[i]->getY();
 					if ($this->dir == 1) {
 						if ($this->x == $x && ($this->y - $y) <= $this->weapon->getRange()) {
-							$value->ship[i]->takeDamage($this->weapon->getDamage())
+							$value->ship[i]->takeDamage($this->weapon->getDamage());
 						}
 					}
 					if ($this->dir == 2) {
 						if ($this->y == $y && ($x - $this->x ) <= $this->weapon->getRange()) {
-							$value->ship[i]->takeDamage($this->weapon->getDamage())
+							$value->ship[i]->takeDamage($this->weapon->getDamage());
 						}
 					}
 					if ($this->dir == 3) {
 						if ($this->x == $x && ($y - $this->y) <= $this->weapon->getRange()) {
-							$value->ship[i]->takeDamage($this->weapon->getDamage())
+							$value->ship[i]->takeDamage($this->weapon->getDamage());
 						}
 					}
 					if ($this->dir == 4) {
 						if ($this->y == $y && ($this->x - $x) <= $this->weapon->getRange()) {
-							$value->ship[i]->takeDamage($this->weapon->getDamage())
+							$value->ship[i]->takeDamage($this->weapon->getDamage());
 						}
 					}
 				}

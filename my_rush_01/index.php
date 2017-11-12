@@ -30,11 +30,11 @@
 				<div class="base_point">Range: 0</div>
 				<br>
 				<div class="button_menu">
-					<a class="button" id="Left"></a>
-					<a class="button" id="Right"></a>
-					<a class="button" id="Go"></a>
+					<a class="button1" id="Left"></a>
+					<a class="button1" id="Right"></a>
+					<a class="button1" id="Go"></a>
 					<br>
-					<a class="button_fire" id="at1">Fire!</a>
+					<a class="button_fire1" id="at1">Fire!</a>
 					<br>
 					<div class="Firefly"><img id="Firefly" src="img1.png"></div>
 					<div class="MilleniumFalcon"><img id="MilleniumFalcon" src="img2.png"></div>
@@ -52,11 +52,11 @@
 				<div class="base_point">Range: 0</div>
 				<br>
 				<div class="button_menu">
-					<a class="button" id="Left"></a>
-					<a class="button" id="Right"></a>
-					<a class="button" id="Go"></a>
+					<a class="button2" id="Left"></a>
+					<a class="button2" id="Right"></a>
+					<a class="button2" id="Go"></a>
 					<br>
-					<a class="button_fire" id="at1">Fire!</a>
+					<a class="button_fire2" id="at1">Fire!</a>
 					<br>
 					<div class="Firefly"><img id="Firefly" src="img1.png"></div>
 					<div class="MilleniumFalcon"><img id="MilleniumFalcon" src="img2.png"></div>

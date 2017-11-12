@@ -38,24 +38,46 @@ h1 {
 .button_menu {
 	text-align: center;
 }
-.button, .button_fire {
+
+.button1, .button_fire1 {
 	cursor: pointer;
 	display: inline-block;
     padding: 0.5vw 0.5vw;
 	margin: 0.2vw;
-	font-size: 1vw;
+	font-size: 2vw;
+	background-color: red;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+.button2, .button_fire2 {
+	cursor: pointer;
+	display: inline-block;
+    padding: 0.5vw 0.5vw;
+	margin: 0.2vw;
+	font-size: 2vw;
 	background-color: green;
 	text-decoration: none;
 	color: white;
 	text-align: center;
 }
-a.button:hover {
-	background-color: lightgreen;
+a.button1:hover {
+	background-color: #FF4500;
 	color: white;
-	box-shadow: 0 0 5px 2px #fff;
+	box-shadow: 0 0 10px 5px #fff;
 }
-a.button_fireattack:hover {
+a.button_fire1:hover {
 	background-color: red;
 	color: black;
-	box-shadow: 0 0 5px 2px black;
+	box-shadow: 0 0 10px 5px black;
+}
+a.button2:hover {
+	background-color: lightgreen;
+	color: white;
+	box-shadow: 0 0 10px 5px #fff;
+}
+a.button_fire2:hover {
+	background-color: green;
+	color: black;
+	box-shadow: 0 0 10px 5px black;
 }
