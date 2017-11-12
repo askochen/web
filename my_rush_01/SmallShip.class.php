@@ -18,10 +18,6 @@ class SmallShip extends BaseShip
 	{
 		$this->base_speed = 4;
 	}
-	public function Shoot()
-	{
-		return 1;
-	}
 	protected function setWeapon()
 	{
 		$this->weapon = new Laser;
