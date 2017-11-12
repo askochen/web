@@ -28,6 +28,9 @@ class BigShip extends BaseShip
 	}
 	public 	function isShipCell($x, $y)
 	{
+		if ($this->destroyed) {
+			return false;
+		}
 		if ($this->dir == 1 || $this->dir == 3) {
 			if (abs(intval($this->x) - intval($x)) < 2 && abs(intval($this->y) - intval($y)) < 5) {
 				return true;

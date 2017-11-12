@@ -41,7 +41,6 @@ class Playfield
 
 	public function Load()
 	{
-			echo "Load";
 		if (!isset($_SESSION["playfield"]))
 		{
 			$_SESSION["playfield"][$this->player[1]->getName()]['ship1'] = array("x" => 20, "y" => 10,  "active" => false, 'destroyed' => false );

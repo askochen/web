@@ -18,7 +18,6 @@
 				$pf = new Playfield("Player1", "Player2");
 
 	?>
-
 		<div class="Players_menu">
 			<header>
 				<h1>Space Battle</h1>
@@ -81,42 +80,44 @@
 				<p>Player_2: <?php echo $_SESSION["login_2"]." GREEN"; ?></p>
 				<br>
 				<div class="base_point">HP: <?php 
-											$ship = $pf->player[1]->isActive();
+											$ship = $pf->player[2]->isActive();
 											if ($ship) {
-												echo $ship->getHP();
+												echo $pf->player[2]->ship[$ship]->getHP();
 											}
 											else
 												echo "0"; ?> </div>
 				<div class="base_point">Damage: <?php 
-											$ship = $pf->player[1]->isActive();
+											$ship = $pf->player[2]->isActive();
 											if ($ship) {
-												echo $ship->getDamage();
+												echo $pf->player[2]->ship[$ship]->getDamage();
 											}
 											else
 												echo "0"; ?></div>
 				<div class="base_point">Speed: <?php 
-											$ship = $pf->player[1]->isActive();
+											$ship = $pf->player[2]->isActive();
 											if ($ship) {
-												echo $ship->getSpeed();
+												echo $pf->player[2]->ship[$ship]->getSpeed();
 											}
 											else
 												echo "0"; ?></div>
 				<div class="base_point">PP: <?php 
-											$ship = $pf->player[1]->isActive();
+											$ship = $pf->player[2]->isActive();
 											if ($ship) {
-												echo $ship->getPP();
+												echo $pf->player[2]->ship[$ship]->getPP();
 											}
 											else
 												echo "0"; ?> </div>
 				<div class="base_point">Range: <?php 
-											$ship = $pf->player[1]->isActive();
+											$ship = $pf->player[2]->isActive();
 											if ($ship) {
-												echo $ship->getDamage();
+												echo $pf->player[2]->ship[$ship]->getDamage();
 											}
 											else
 												echo "0"; ?></div>
 				<br>
 				<div class="button_menu">
+					Hello there!
+					<a href='index.php?hello=true'>Run PHP Function</a>
 					<a class="button2" id="Left">Left</a>
 					<a class="button2" id="Right">Right</a>
 					<a class="button2" id="Go">Go</a>
