@@ -22,7 +22,10 @@ class BigShip extends BaseShip
 	{
 		$this->weapon = new Anigilator;
 	}
-
+	public 	function getIndex()
+	{
+		return 1;
+	}
 }
 
 ?>

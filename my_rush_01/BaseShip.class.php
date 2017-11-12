@@ -7,7 +7,7 @@ abstract class BaseShip
 	abstract protected 	function setHP();
 	abstract protected 	function setSpeed();
 	abstract protected 	function setWeapon();
-
+	abstract public 	function getIndex();
 	public function __construct($player)
 	{
 		$this->player = $player;
@@ -25,12 +25,17 @@ abstract class BaseShip
 		$this->active = false;
 	}
 
+	public function setDir($value)
+	{
+		$this->dir = $value;
+	}
 	public function turnLeft()
 	{
 		if ($this->$dir == 1)
 			$this->$dir = 4;
 		else
 			$this->$dir -= 1;
+		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['dir'] = $this->dir;
 	}
 	public function turnRight()
 	{
@@ -38,6 +43,7 @@ abstract class BaseShip
 			$this->$dir = 1;
 		else
 			$this->$dir += 1;
+		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['dir'] = $this->dir;
 	}
 
 	public function Move()
@@ -50,6 +56,8 @@ abstract class BaseShip
 			$this->$y += random_int(1, 6) * $this->$speed * $this->$base_speed;
 		if ($this->$dir == 4)
 			$this->$x -= random_int(1, 6) * $this->$speed * $this->$base_speed;
+		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['x'] = $this->x;
+		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['y'] = $this->y;
 	}
 
 	public function getName()
@@ -60,6 +68,11 @@ abstract class BaseShip
 	public function setX($val)
 	{
 		$this->$x = $val;
+	}
+
+	public function setHP($val)
+	{
+		$this->$HP = $val;
 	}
 
 	public function setY($val)
@@ -79,6 +92,7 @@ abstract class BaseShip
 	public function Activate()
 	{
 		$this->active = true;
+		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['active'] = $this->active;
 	}
 	public function Shoot()
 	{
@@ -116,6 +130,7 @@ abstract class BaseShip
 	public function takeDamage($dam)
 	{
 		$this->HP -= $dam;
+		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['hp'] = $this->HP;
 		if ($this->HP <= 0) {
 			$this->Destoy();
 		}
@@ -123,6 +138,7 @@ abstract class BaseShip
 	public function Destoy()
 	{
 		$this->destroyed = true;
+		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['destroyed'] = $this->destroyed;
 	}
 	public function Show()
 	{

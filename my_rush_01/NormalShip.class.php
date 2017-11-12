@@ -22,6 +22,14 @@ class NormalShip extends BaseShip
 	{
 		$this->weapon = new SpaceGun;
 	}
+	public 	function getIndex()
+	{
+		return 2;
+	}
+	public 	function getIndex()
+	{
+		return 3;
+	}
 }
 
 ?>
