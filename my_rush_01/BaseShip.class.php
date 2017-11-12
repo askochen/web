@@ -1,5 +1,5 @@
 <?php
-
+require "Weapon.class.php";
 abstract class BaseShip
 {
 	abstract protected 	function setName();
@@ -7,6 +7,7 @@ abstract class BaseShip
 	abstract protected 	function setHP();
 	abstract protected 	function setSpeed();
 	abstract public 	function Shoot();
+	abstract protected 	function setWeapon();
 
 	public function __construct($player)
 	{

@@ -22,6 +22,10 @@ class SmallShip extends BaseShip
 	{
 		return 1;
 	}
+	protected function setWeapon()
+	{
+		$this->weapon = new Laser;
+	}
 }
 
 ?>

@@ -18,6 +18,10 @@ class NormalShip extends BaseShip
 	{
 		$this->base_speed = 2;
 	}
+	protected function setWeapon()
+	{
+		$this->weapon = new SpaceGun;
+	}
 	public function Shoot()
 	{
 		return 2;
