@@ -56,9 +56,15 @@
 					$j = 0;
 					echo "<tr>";
 					while($j < 150)
-					{
-						if($pf->isCellWithShip($j,$i))
+					{	
+						$bool = $pf->isCellWithShip($j,$i);
+						if($bool)
+						{
+							if ($bool == 1)
 							echo "<td style=\"background: red; box-shadow: 1px 0px 20px 12px red;\" id=\"$i$j\"></td>";
+							else
+								echo "<td style=\"background: green; box-shadow: 1px 0px 20px 12px green;\" id=\"$i$j\"></td>";
+						}
 						else if ($pf->isCellWithAsteroid($j,$i))
 							echo "<td style=\"background: blue; box-shadow: 1px 0px 20px 12px blue;\" id=\"$i$j\"></td>";
 						else

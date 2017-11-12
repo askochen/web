@@ -73,7 +73,7 @@ class Playfield
 		for ($i = 1; $i < 3; $i++) { 
 			for ($j = 1; $j < 4; $j++) { 
 				if ($this->player[$i]->ship[$j]->isShipCell($index_i, $index_j)) {
-					return true;
+					return $i;
 				}
 			}
 		}
