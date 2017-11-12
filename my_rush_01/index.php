@@ -13,18 +13,7 @@
 	require "Playfield.class.php"; 
 				echo "creating Playfield";
 				$pf = new Playfield("Player1", "Player2");
-				$pf->Show();
-				for ($i=1; $i < 3; $i++) { 
-					for ($j=1; $j < 4; $j++) { 
-		echo "\n".$pf->player[$i]->ship[$j]->getX().' '.$pf->player[$i]->ship[$j]->getY()."\n";
-					}
-				}
-				for ($i = 1; $i < 151; $i++) { 
-					for ($j = 0; $j < 101; $j++) { 
-						if($pf->isCellWithShip($i, $j))
-							echo "\n".$i.' '.$j."\n";
-					}
-				}
+
 	?>
 
 		<div class="Players_menu">
@@ -67,8 +56,8 @@
 					{
 						if($pf->isCellWithShip($j,$i))
 							echo "<td style=\"background: red; box-shadow: 1px 0px 20px 12px red;\" id=\"$i$j\"></td>";
-						#else if ($p2->x() == $j && $p2->y() == $i)
-						#	echo "<td style=\"background: blue; box-shadow: 1px 0px 20px 12px blue;\" id=\"$i$j\"></td>";
+						else if ($pf->isCellWithAsteroid($j,$i))
+							echo "<td style=\"background: blue; box-shadow: 1px 0px 20px 12px blue;\" id=\"$i$j\"></td>";
 						else
 							echo "<td id=\"$i$j\"></td>";
 						$j++;

@@ -2,6 +2,7 @@
 
 require "Cell.class.php";
 require "Player.class.php";
+require "Asteroid.class.php";
 class Playfield
 {
 	public function __construct($name1, $name2)
@@ -9,6 +10,19 @@ class Playfield
 		$this->player[1] = new Player($this, $name1);
 		$this->player[2] = new Player($this, $name2);
 		$this->Load();
+		$this->createAsteroids();
+	}
+	protected function createAsteroids()
+	{
+		for ($i=1; $i < 6; $i++) { 
+					$this->asteroid[$i] = new Asteroid;
+				}	
+		$this->asteroid[1]->setXY(50, 15);		
+		$this->asteroid[2]->setXY(100, 30);		
+		$this->asteroid[3]->setXY(50, 45);		
+		$this->asteroid[4]->setXY(100, 60);		
+		$this->asteroid[5]->setXY(50, 75);			
+
 	}
 
 	public function Show()
@@ -58,6 +72,15 @@ class Playfield
 				if ($this->player[$i]->ship[$j]->isShipCell($index_i, $index_j)) {
 					return true;
 				}
+			}
+		}
+		return false;
+	}
+	public function isCellWithAsteroid($index_i, $index_j)
+	{
+		for ($i = 1; $i < 6; $i++) { 
+				if ($this->asteroid[$i]->isPointOnAsteroid($index_i, $index_j)) {
+					return true;
 			}
 		}
 		return false;
