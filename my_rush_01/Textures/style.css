@@ -109,7 +109,6 @@ a.button_fire2:hover {
 {
 	width: 80%;
 	cursor: pointer;
-	border-radius: 2vw;
 	align-items: center;
 
 }
@@ -117,15 +116,15 @@ a.button_fire2:hover {
 {
 	width: 80%;
 	cursor: pointer;
-	border-radius: 2vw;
+
 }
 .Enterprise
 {
 	cursor: pointer;
-	border-radius: 2vw;
+
 }
 table {
-	width: 1800px;
+	width: 2200px;
 	opacity: 0.8;
 	background: rgba(0, 0, 0, 0.5);
 	margin-bottom: 20px;
@@ -201,4 +200,11 @@ table td img {
 	border-radius: 15px;
 	cursor: pointer;
 
+}
+.logout {
+	color: white;
+}
+.message {
+	color: blue;
+	text-align: center;
 }

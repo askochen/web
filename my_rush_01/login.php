@@ -1,40 +1,44 @@
 <?php 
-
-session_start();
-
-function auth($log, $pas) {
-	$users = file("./data/users.csv");
-
-	foreach ($users as $key => $value) {
-		$temp = explode(";", $value);
-		unset($users[$key]);
-		$users[$temp[0]] = $temp[1];
-	}
-	
-	foreach ($users as $key => $value) {
-		if ($key == $log && $value == $pas)
-			return true;
-		if ($key == $log && $value != $pas)
-			return false;
-	}
-
-	file_put_contents("./data/users.csv", $log.";".$pas.";\n", FILE_APPEND);
-	return true;
-}
-
-if (isset($_POST["loggin_1"]) && !empty($_POST["loggin_1"]) &&  isset($_POST["log2"]) && !empty($_POST["log2"]) &&  isset($_POST["pas1"]) && !empty($_POST["pas1"]) &&  isset($_POST["pas2"]) && !empty($_POST["pas2"]))
-{
-	if (auth($_POST["log1"], $_POST["pas1"]) && auth($_POST["log2"], $_POST["pas2"]))
+	session_start();
+	function auth($log, $pas)
 	{
-		$_SESSION["logged"] = 1;
-		$_SESSION["log1"] = $_POST["log1"];
-		$_SESSION["log2"] = $_POST["log2"];
-		header("location: ./index.php");
+		$player = file("./data/data.csv");
+		foreach ($player as $var => $elem)
+		{
+			$tmp = explode(";", $elem);
+			unset($player[$var]);
+			$player[$tmp[0]] = $tmp[1];
+		}
+		foreach ($player as $var => $elem) 
+		{
+			if ($var == $log && $elem == $pas)
+			{
+				return true;
+			}
+			if ($var == $log && $elem != $pas)
+			{
+				return false;
+			}
+		}
+		file_put_contents("./data/data.csv", $log.";".$pas.";\n", FILE_APPEND);
+		return true;
+	}
+	if (isset($_POST["login_1"]) && !empty($_POST["login_1"]) && isset($_POST["password_1"]) && !empty($_POST["password_1"]) && isset($_POST["login_2"])  &&  !empty($_POST["login_2"]) &&  isset($_POST["password_2"]) && !empty($_POST["password_2"]))
+	{
+		if (auth($_POST["login_1"], $_POST["password_1"]) && auth($_POST["login_2"], $_POST["password_2"]))
+		{
+			$_SESSION["game"] = 1;
+			$_SESSION["login_1"] = $_POST["login_1"];
+			$_SESSION["login_2"] = $_POST["login_2"];
+			header("location: ./index.php");
+		}
+		else
+		{
+			header("location: ./error.php");
+		}
 	}
 	else
-		header("location: ./fail.php");
-}
-else
-		header("location: ./fail.php");
-
+	{
+			header("location: ./error.php");
+	}
 ?>
