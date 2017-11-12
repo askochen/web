@@ -8,6 +8,7 @@ abstract class BaseShip
 	abstract protected 	function setSpeed();
 	abstract protected 	function setWeapon();
 	abstract public 	function getIndex();
+	abstract public 	function isShipCell($x, $y);
 	public function __construct($player)
 	{
 		$this->player = $player;
@@ -31,63 +32,63 @@ abstract class BaseShip
 	}
 	public function turnLeft()
 	{
-		if ($this->$dir == 1)
-			$this->$dir = 4;
+		if ($this->dir == 1)
+			$this->dir = 4;
 		else
-			$this->$dir -= 1;
+			$this->dir -= 1;
 		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['dir'] = $this->dir;
 	}
 	public function turnRight()
 	{
-		if ($this->$dir == 4)
-			$this->$dir = 1;
+		if ($this->dir == 4)
+			$this->dir = 1;
 		else
-			$this->$dir += 1;
+			$this->dir += 1;
 		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['dir'] = $this->dir;
 	}
 
 	public function Move()
 	{
-		if ($this->$dir == 1)
-			$this->$y -= random_int(1, 6) * $this->$speed * $this->$base_speed;
-		if ($this->$dir == 2)
-			$this->$x += random_int(1, 6) * $this->$speed * $this->$base_speed;
-		if ($this->$dir == 3)
-			$this->$y += random_int(1, 6) * $this->$speed * $this->$base_speed;
-		if ($this->$dir == 4)
-			$this->$x -= random_int(1, 6) * $this->$speed * $this->$base_speed;
+		if ($this->dir == 1)
+			$this->y -= random_int(1, 6) * $this->speed * $this->base_speed;
+		if ($this->dir == 2)
+			$this->x += random_int(1, 6) * $this->speed * $this->base_speed;
+		if ($this->dir == 3)
+			$this->y += random_int(1, 6) * $this->speed * $this->base_speed;
+		if ($this->dir == 4)
+			$this->x -= random_int(1, 6) * $this->speed * $this->base_speed;
 		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['x'] = $this->x;
 		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['y'] = $this->y;
 	}
 
 	public function getName()
 	{
-		return $this->$name;
+		return $this->name;
 	}
 
 	public function setX($val)
 	{
-		$this->$x = $val;
+		$this->x = $val;
 	}
 
-	public function setHP($val)
+	public function changeHP($val)
 	{
-		$this->$HP = $val;
+		$this->HP = $val;
 	}
 
 	public function setY($val)
 	{
-		$this->$y = $val;
+		$this->y = $val;
 	}
 
 	public function getX()
 	{
-		return $this->$x;
+		return $this->x;
 	}
 
 	public function getY()
 	{
-		return $this->$y;
+		return $this->y;
 	}
 	public function Activate()
 	{

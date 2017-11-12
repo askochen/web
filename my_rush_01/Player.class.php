@@ -1,5 +1,5 @@
 <?php
-
+	require "BaseShip.class.php"; 
 class Player
 {
 	public function __construct($playfield, $name)
@@ -18,6 +18,11 @@ class Player
 			$this->active = $index;
 			$this->ship[$index]->Activate();
 		}
+	}
+
+	public function getName()
+	{
+		return $this->name;
 	}
 
 	public function pressTurnLeft()

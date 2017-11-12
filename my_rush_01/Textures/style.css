@@ -121,3 +121,48 @@ table td {
 table td img {
 	position: absolute;
 }
+.container {
+	width: 2300px;
+	margin: 0 auto;
+}
+.form_container {
+	width: 70%;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.form_container h2 {
+	font-size: 32px;
+	margin: 50px 0;
+}
+
+.form_container .form {
+	font-size: 22px;
+}
+
+.form_container input[type="text"], .form_container input[type="password"] {
+	margin-right: 100px;
+	height: 40px;
+	width: 200px;
+	border-radius: 20px;
+	font-size: 18px;
+	outline: none;
+}
+
+.form_container input[type="submit"] {
+	width: 250px;
+	font-size: 22px;
+	height: 60px;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	background: #fff;
+	vertical-align: bottom;
+	display: block;
+	margin: 100px auto;
+}

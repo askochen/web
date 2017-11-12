@@ -20,15 +20,25 @@ class NormalShip extends BaseShip
 	}
 	protected function setWeapon()
 	{
-		$this->weapon = new SpaceGun;
+		$this->weapon = new SpaceGun($this);
 	}
 	public 	function getIndex()
 	{
 		return 2;
 	}
-	public 	function getIndex()
+		public 	function isShipCell($x, $y)
 	{
-		return 3;
+		if ($this->dir == 1 || $this->dir == 3) {
+			if (abs($this->x - $x) < 1 && abs($this->y - $y) < 3) {
+				return true;
+			}
+		}
+		else {
+			if (abs($this->x - $x) < 3 && abs($this->y - $y) < 1) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
 
