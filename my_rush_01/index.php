@@ -12,14 +12,7 @@
 	require "BaseShip.class.php"; 
 	require "Playfield.class.php"; 
 
-				$p1 = new BigShip();
-				echo $p1->Show();
-				$p2 = new NormalShip();
-				echo $p2->Show();
-				$p3 = new SmallShip();
-				echo $p3->Show();
-
-				$pf = new Playfield();
+				$pf = new Playfield("player1", "Player2");
 				echo $pf->Show();
 	?>
 </body>
