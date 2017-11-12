@@ -81,3 +81,43 @@ a.button_fire2:hover {
 	color: black;
 	box-shadow: 0 0 10px 5px black;
 }
+
+.Firefly
+{
+	width: 80%;
+	cursor: pointer;
+	border-radius: 2vw;
+	align-items: center;
+
+}
+.MilleniumFalcon
+{
+	width: 80%;
+	cursor: pointer;
+	border-radius: 2vw;
+}
+.Enterprise
+{
+	cursor: pointer;
+	border-radius: 2vw;
+}
+table {
+	width: 1800px;
+	opacity: 0.8;
+	background: rgba(0, 0, 0, 0.5);
+	margin-bottom: 20px;
+	margin-left: 260px;
+}
+
+table td {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	width: 15px;
+	height: 10px;
+	overflow: visible;
+	position: relative;
+	vertical-align: top;
+}
+
+table td img {
+	position: absolute;
+}
