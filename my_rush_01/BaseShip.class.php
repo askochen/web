@@ -77,7 +77,7 @@ abstract class BaseShip
 	}
 	public function Activate()
 	{
-		$this->active = true
+		$this->active = true;
 	}
 	public function Show()
 	{

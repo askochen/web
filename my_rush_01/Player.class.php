@@ -6,17 +6,17 @@ class Player
 	{
 		$this->playfield = $playfield;
 		$this->name = $name;
-		$this->ship[1] = new BigShip;
-		$this->ship[2] = new NormalShip;
-		$this->ship[3] = new SmallShip;
+		$this->ship[1] = new BigShip($this);
+		$this->ship[2] = new NormalShip($this);
+		$this->ship[3] = new SmallShip($this);
 	}
 
-	public function ChooseShip(index)
+	public function ChooseShip($index)
 	{
 		if(!$this->active)		
 		{
-			$this->active = index;
-			$this->ship[index]->Activate();
+			$this->active = $index;
+			$this->ship[$index]->Activate();
 		}
 	}
 
@@ -50,7 +50,7 @@ class Player
 
 	public function Show()
 	{
-		return $this->ship[1]->Show().$this->ship[2]->Show().$this->ship[3];
+		return $this->ship[1]->Show().$this->ship[2]->Show().$this->ship[3]->Show();
 	}
 }
 ?>
