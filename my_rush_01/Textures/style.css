@@ -1,0 +1,10 @@
+body {
+	background: url("../Textures/galaxy.jpg");
+	-webkit-background-size: cover;
+	background-size: cover;
+	z-index: 1;
+	text-align: center;
+	font-family: 'Verdana', cursive;
+	color: red;
+	position: relative;
+}

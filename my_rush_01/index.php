@@ -1,9 +1,9 @@
-<?php require "install.php" ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
-	<title>Warhammer 40000</title>
+	<title>Spase Battle</title>
+	<link rel="stylesheet" href="./Textures/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
 	<script src="./js/jquery-3.2.1.min.js"></script>
 </head>
