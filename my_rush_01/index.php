@@ -15,11 +15,10 @@
 				echo $pf->Show();
 	?>
 
-		<div class="Panel">
+		<div class="Players_menu">
 			<header>
 				<h1>Spase Battle</h1>
 			</header>
-		</div>
 			<div class="login_1">
 				<br>
 				<p>Player_1: <?php echo $_SESSION["login_1"]." RED"; ?></p>
@@ -30,6 +29,17 @@
 				<div class="base_point">PP: 0 </div>
 				<div class="base_point">Range: 0</div>
 				<br>
+				<div class="button_menu">
+					<a class="button" id="Left"></a>
+					<a class="button" id="Right"></a>
+					<a class="button" id="Go"></a>
+					<br>
+					<a class="button_fire" id="at1">Fire!</a>
+					<br>
+					<div class="Firefly"><img id="Firefly" src="img1.png"></div>
+					<div class="MilleniumFalcon"><img id="MilleniumFalcon" src="img2.png"></div>
+					<div class="Enterprise"><img id="Enterprise" src="img3.png"></div>
+	  			</div>
 			</div>
 			<div class="login_2">
 				<br>
@@ -41,6 +51,18 @@
 				<div class="base_point">PP: 0 </div>
 				<div class="base_point">Range: 0</div>
 				<br>
+				<div class="button_menu">
+					<a class="button" id="Left"></a>
+					<a class="button" id="Right"></a>
+					<a class="button" id="Go"></a>
+					<br>
+					<a class="button_fire" id="at1">Fire!</a>
+					<br>
+					<div class="Firefly"><img id="Firefly" src="img1.png"></div>
+					<div class="MilleniumFalcon"><img id="MilleniumFalcon" src="img2.png"></div>
+					<div class="Enterprise"><img id="Enterprise" src="img3.png"></div>
+	  			</div>
 			</div>
+		</div>
 	</body>
 </html>

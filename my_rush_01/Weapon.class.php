@@ -1,5 +1,5 @@
 <?php
-abstract class Weaopn
+abstract class Weapon
 {
 	abstract protected 	function setName();
 	abstract protected 	function setRange();
@@ -25,6 +25,7 @@ abstract class Weaopn
 	{
 		return $this->damage;
 	}
+}
 require "Laser.class.php";
 require "SpaceGun.class.php";
 require "Anigilator.class.php";

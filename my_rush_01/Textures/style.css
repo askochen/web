@@ -2,172 +2,60 @@ body {
 	background: url("../Textures/galaxy.jpg");
 	background-size: cover;
 	text-align: center;
-	font-family: 'Verdana', cursive;
+	font-family: 'Times new roman', cursive;
 	position: relative;
 }
-
-.panel {
-	width: 2300px;
-	margin: 0 auto;
-}
-
 h1 {
-	text-align: center;
-	color: #fff;
 	font-size: 40px;
 	margin: 20px 0;
-}
-
-header {
-	position: relative;
-	width: 90%;
-	margin: 0 auto;
-}
-
-header .logout {
-	font-size: 32px;
+	text-align: center;
 	color: #fff;
-	position: absolute;
-	right: 0;
-	top: 5px;
-}
-
-
-table {
-	width: 1800px;
-	opacity: 0.8;
-	background: rgba(0, 0, 0, 0.5);
-	margin-bottom: 20px;
-	margin-left: 260px;
-}
-
-table td {
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	width: 15px;
-	height: 10px;
-	overflow: visible;
-	position: relative;
-	vertical-align: top;
-}
-
-table td img {
-	position: absolute;
 }
 
 .login_1 {
 	height: 500px;
 	width: 200px;
-	position: absolute;
 	color: red;
+	font-weight: bolder;
 	left: 0;
 	top: 0;
-	background: rgba(255, 255, 255, 0.6);
+	background: #000080;
 	margin-right: 30px;
+	position: absolute;
 }
 
 .login_2 {
 	height: 500px;
 	width: 200px;
 	color: green;
-	position: absolute;
 	right: 0;
 	top: 0;
-	background: rgba(255, 255, 255, 0.6);
+	background: #000080;
+	position: absolute;
+	font-weight: bolder;
 }
 
-.login_1 span {
-	display: block;
-	margin-top: 10px;
-}
-
-.points {
-margin: 20px 0;
-font-size: 25px;
-}
-
-.player_1 a {
-	display: inline-block;
-	border: 1px solid red;
-	padding: 3px 8px;
-	border-radius: 5px;
-	width: 50px;
-}
-
-main .pl1 a:nth-child(2) {
-	margin: 0 0 20px 20px;
-}
-
-main .pl1 a:nth-child(5) {
-	margin-left: 20px;
-}
-
-main .pl1 a:last-child {
-	margin-top: 20px;
-}
-
-footer {
-	width: 90%;
-	margin: 0 auto;
-	border: 1px dashed red;
-	background: rgba(255, 255, 255, 0.5);
-	text-align: center;
-	padding: 30px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.small {
-	background: red;
-}
-
-.medium {
-	background: yellow;
-}
-
-.big {
-	background: green;
-}
-
-.form_container {
-	width: 70%;
-	margin: 0 auto;
-	background: rgba(255, 255, 255, 0.7);
-	padding: 50px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+.button_menu {
 	text-align: center;
 }
-
-.form_container h2 {
-	font-size: 32px;
-	margin: 50px 0;
-}
-
-.form_container .form {
-	font-size: 22px;
-}
-
-.form_container input[type="text"], .form_container input[type="password"] {
-	margin-right: 100px;
-	height: 40px;
-	width: 200px;
-	border-radius: 20px;
-	font-size: 18px;
-	outline: none;
-}
-
-.form_container input[type="submit"] {
-	width: 250px;
-	font-size: 22px;
-	height: 60px;
-	border: none;
-	border-radius: 15px;
+.button, .button_fire {
 	cursor: pointer;
-	background: #fff;
-	vertical-align: bottom;
-	display: block;
-	margin: 100px auto;
+	display: inline-block;
+    padding: 0.5vw 0.5vw;
+	margin: 0.2vw;
+	font-size: 1vw;
+	background-color: green;
+	text-decoration: none;
+	color: white;
+	text-align: center;
 }
-
+a.button:hover {
+	background-color: lightgreen;
+	color: white;
+	box-shadow: 0 0 5px 2px #fff;
+}
+a.button_fireattack:hover {
+	background-color: red;
+	color: black;
+	box-shadow: 0 0 5px 2px black;
+}
