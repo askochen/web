@@ -11,6 +11,9 @@ class Playfield
 		$this->player[2] = new Player($this, $name2);
 		$this->Load();
 		$this->createAsteroids();
+		for ($i=1; $i < 3; $i++) { 
+			$this->player[$i]->getShip(1)->Activate();
+		}
 	}
 	public function getPlayer($value)
 	{

@@ -26,11 +26,41 @@
 				<br>
 				<p>Player_1: <?php echo $_SESSION["login_1"]." RED"; ?></p>
 				<br>
-					<div class="base_point">HP: 0 </div>
-					<div class="base_point">Damage: 0</div>
-					<div class="base_point">Speed: 0</div>
-					<div class="base_point">PP: 0 </div>
-					<div class="base_point">Range: 0</div>
+				<div class="base_point">HP: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $pf->player[1]->ship[$ship]->getHP();
+											}
+											else
+												echo "0"; ?> </div>
+				<div class="base_point">Damage: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $pf->player[1]->ship[$ship]->getDamage();
+											}
+											else
+												echo "0"; ?></div>
+				<div class="base_point">Speed: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $pf->player[1]->ship[$ship]->getSpeed();
+											}
+											else
+												echo "0"; ?></div>
+				<div class="base_point">PP: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $pf->player[1]->ship[$ship]->getPP();
+											}
+											else
+												echo "0"; ?> </div>
+				<div class="base_point">Range: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $pf->player[1]->ship[$ship]->getDamage();
+											}
+											else
+												echo "0"; ?></div>
 				<br>
 				<div class="button_menu">
 					<a class="button1" id="Left">Left</a>
