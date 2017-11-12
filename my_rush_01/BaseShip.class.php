@@ -8,8 +8,9 @@ abstract class BaseShip
 	abstract protected 	function setSpeed();
 	abstract public 	function Shoot();
 
-	public function __construct()
+	public function __construct($player)
 	{
+		$this->player = $player;
 		$this->initData();
 		$this->setName();
 		$this->setPP();
@@ -20,6 +21,7 @@ abstract class BaseShip
 	{
 		$this->dir = 1;
 		$this->speed = 1;
+		$this->active = false;
 	}
 
 	public function turnLeft()
@@ -73,7 +75,10 @@ abstract class BaseShip
 	{
 		return $this->$y;
 	}
-
+	public function Activate()
+	{
+		$this->active = true
+	}
 	public function Show()
 	{
 	return $this->name." ".$this->PP." ".$this->HP." ".$this->base_speed." ".$this->Shoot()."\n";
