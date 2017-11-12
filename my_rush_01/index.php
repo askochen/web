@@ -27,25 +27,11 @@
 				<br>
 				<p>Player_1: <?php echo $_SESSION["login_1"]." RED"; ?></p>
 				<br>
-				<?php 
-				if ($pf->getPlayer(1)->isActive()) 
-				{
-					$ship = $pf->getPlayer(1)->getShip($pf->getPlayer(1)->isActive());
-					<div class="base_point">HP: $ship->getHP(); </div>
-					<div class="base_point">Damage: $ship->getDamage();</div>
-					<div class="base_point">Speed: $ship->getSpeed();</div>
-					<div class="base_point">PP: $ship->getPP(); </div>
-					<div class="base_point">Range: $ship->getRange();</div>
-				}
-				else
-				{
 					<div class="base_point">HP: 0 </div>
 					<div class="base_point">Damage: 0</div>
 					<div class="base_point">Speed: 0</div>
 					<div class="base_point">PP: 0 </div>
 					<div class="base_point">Range: 0</div>
-				}
-				?>
 				<br>
 				<div class="button_menu">
 					<a class="button1" id="Left">Left</a>
@@ -94,11 +80,41 @@
 				<br>
 				<p>Player_2: <?php echo $_SESSION["login_2"]." GREEN"; ?></p>
 				<br>
-				<div class="base_point">HP: 0 </div>
-				<div class="base_point">Damage: 0</div>
-				<div class="base_point">Speed: 0</div>
-				<div class="base_point">PP: 0 </div>
-				<div class="base_point">Range: 0</div>
+				<div class="base_point">HP: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $ship->getHP();
+											}
+											else
+												echo "0"; ?> </div>
+				<div class="base_point">Damage: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $ship->getDamage();
+											}
+											else
+												echo "0"; ?></div>
+				<div class="base_point">Speed: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $ship->getSpeed();
+											}
+											else
+												echo "0"; ?></div>
+				<div class="base_point">PP: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $ship->getPP();
+											}
+											else
+												echo "0"; ?> </div>
+				<div class="base_point">Range: <?php 
+											$ship = $pf->player[1]->isActive();
+											if ($ship) {
+												echo $ship->getDamage();
+											}
+											else
+												echo "0"; ?></div>
 				<br>
 				<div class="button_menu">
 					<a class="button2" id="Left">Left</a>
