@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start(); 
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +21,7 @@
 
 		<div class="Players_menu">
 			<header>
-				<h1>Spase Battle</h1>
+				<h1>Space Battle</h1>
 			</header>
 			<div class="login_1">
 				<br>
@@ -31,9 +34,9 @@
 				<div class="base_point">Range: 0</div>
 				<br>
 				<div class="button_menu">
-					<a class="button1" id="Left"></a>
-					<a class="button1" id="Right"></a>
-					<a class="button1" id="Go"></a>
+					<a class="button1" id="Left">Left</a>
+					<a class="button1" id="Right">Right</a>
+					<a class="button1" id="Go">Go</a>
 					<br>
 					<br>
 					<a class="button_fire1" id="at1">Fire!</a>
@@ -78,9 +81,9 @@
 				<div class="base_point">Range: 0</div>
 				<br>
 				<div class="button_menu">
-					<a class="button2" id="Left"></a>
-					<a class="button2" id="Right"></a>
-					<a class="button2" id="Go"></a>
+					<a class="button2" id="Left">Left</a>
+					<a class="button2" id="Right">Right</a>
+					<a class="button2" id="Go">Go</a>
 					<br>
 					<br>
 					<a class="button_fire2" id="at1">Fire!</a>

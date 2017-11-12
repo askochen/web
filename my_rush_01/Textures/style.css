@@ -13,7 +13,7 @@ h1 {
 }
 
 .login_1 {
-	height: 500px;
+	height: 800px;
 	width: 200px;
 	color: red;
 	font-weight: bolder;
@@ -25,7 +25,7 @@ h1 {
 }
 
 .login_2 {
-	height: 500px;
+	height: 800px;
 	width: 200px;
 	color: green;
 	right: 0;
@@ -39,23 +39,46 @@ h1 {
 	text-align: center;
 }
 
-.button1, .button_fire1 {
+.button1  {
 	cursor: pointer;
 	display: inline-block;
     padding: 0.5vw 0.5vw;
 	margin: 0.2vw;
-	font-size: 2vw;
+	font-size: 1vw;
 	background-color: red;
 	text-decoration: none;
 	color: white;
 	text-align: center;
 }
-.button2, .button_fire2 {
+.button_fire1 {
 	cursor: pointer;
 	display: inline-block;
     padding: 0.5vw 0.5vw;
 	margin: 0.2vw;
-	font-size: 2vw;
+	font-size: 1vw;
+	background-color: red;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+
+.button2 {
+	cursor: pointer;
+	display: inline-block;
+    padding: 0.5vw 0.5vw;
+	margin: 0.2vw;
+	font-size: 1vw;
+	background-color: green;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+.button_fire2 {
+	cursor: pointer;
+	display: inline-block;
+    padding: 0.5vw 0.5vw;
+	margin: 0.2vw;
+	font-size: 1vw;
 	background-color: green;
 	text-decoration: none;
 	color: white;
@@ -128,7 +151,7 @@ table td img {
 .form_container {
 	width: 70%;
 	margin: 0 auto;
-	background: rgba(255, 255, 255, 0.7);
+	background: white;
 	padding: 50px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -145,24 +168,37 @@ table td img {
 	font-size: 22px;
 }
 
-.form_container input[type="text"], .form_container input[type="password"] {
-	margin-right: 100px;
+.form_container input[type="text"], {
 	height: 40px;
 	width: 200px;
 	border-radius: 20px;
 	font-size: 18px;
 	outline: none;
+	margin-right: 100px;
+
+
+}
+.form_container input[type="password"] {
+	height: 40px;
+	width: 200px;
+	border-radius: 20px;
+	font-size: 18px;
+	outline: none;
+	margin-right: 100px;
+
 }
 
 .form_container input[type="submit"] {
+	
+	background: #fff;
+	vertical-align: bottom;
+	display: block;
+	margin: 100px auto;
 	width: 250px;
 	font-size: 22px;
 	height: 60px;
 	border: none;
 	border-radius: 15px;
 	cursor: pointer;
-	background: #fff;
-	vertical-align: bottom;
-	display: block;
-	margin: 100px auto;
+
 }
