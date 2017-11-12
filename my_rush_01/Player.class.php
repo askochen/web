@@ -19,7 +19,15 @@ class Player
 			$this->ship[$index]->Activate();
 		}
 	}
-
+	public function isActive()
+	{
+		for ($i=1; $i < 4; $i++) { 
+			if ($this->ship[$i]->isActive()) {
+				return $i;
+			}
+		}
+		return false;
+	}
 	public function getName()
 	{
 		return $this->name;

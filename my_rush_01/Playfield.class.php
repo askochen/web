@@ -14,7 +14,8 @@ class Playfield
 	}
 	protected function createAsteroids()
 	{
-		for ($i=1; $i < 6; $i++) { 
+		$this->asteroid_num = 5;
+		for ($i=1; $i < $this->asteroid_num + 1; $i++) { 
 					$this->asteroid[$i] = new Asteroid;
 				}	
 		$this->asteroid[1]->setXY(50, 15);		
@@ -78,7 +79,7 @@ class Playfield
 	}
 	public function isCellWithAsteroid($index_i, $index_j)
 	{
-		for ($i = 1; $i < 6; $i++) { 
+		for ($i = 1; $i < $this->asteroid_num + 1; $i++) { 
 				if ($this->asteroid[$i]->isPointOnAsteroid($index_i, $index_j)) {
 					return true;
 			}

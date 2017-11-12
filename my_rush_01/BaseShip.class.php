@@ -95,6 +95,10 @@ abstract class BaseShip
 		$this->active = true;
 		$_SESSION["playfield"][$this->player->getName()]['ship'.$this->getIndex()]['active'] = $this->active;
 	}
+	public function isActive()
+	{
+		return $this->active;
+	}
 	public function Shoot()
 	{
 		$playfield = $this->player->playfield;
