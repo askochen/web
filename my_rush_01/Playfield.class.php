@@ -12,6 +12,10 @@ class Playfield
 		$this->Load();
 		$this->createAsteroids();
 	}
+	public function getPlayer($value)
+	{
+		return $this->player[$value];
+	}
 	protected function createAsteroids()
 	{
 		$this->asteroid_num = 8;

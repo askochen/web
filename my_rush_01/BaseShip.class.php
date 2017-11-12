@@ -65,6 +65,28 @@ abstract class BaseShip
 	{
 		return $this->name;
 	}
+	public function getHP()
+	{
+		return $this->HP;
+	}
+	public function getDamage()
+	{
+		return $this->weapon->getDamage();
+	}
+	public function getRange()
+	{
+		return $this->weapon->getRange();
+	}
+	public function getSpeed()
+	{
+		return $this->speed * $this->base_speed;
+	}
+	public function getPP()
+	{
+		return $this->PP;
+	}
+	
+
 
 	public function setX($val)
 	{

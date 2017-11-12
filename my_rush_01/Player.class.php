@@ -10,7 +10,10 @@ class Player
 		$this->ship[2] = new NormalShip($this);
 		$this->ship[3] = new SmallShip($this);
 	}
-
+	public function getShip($value)
+	{
+		return $this->ship[$value];
+	}
 	public function ChooseShip($index)
 	{
 		if(!$this->active)		
