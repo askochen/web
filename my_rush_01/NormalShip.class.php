@@ -22,10 +22,6 @@ class NormalShip extends BaseShip
 	{
 		$this->weapon = new SpaceGun;
 	}
-	public function Shoot()
-	{
-		return 2;
-	}
 }
 
 ?>
