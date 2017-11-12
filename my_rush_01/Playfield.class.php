@@ -14,7 +14,7 @@ class Playfield
 	}
 	protected function createAsteroids()
 	{
-		$this->asteroid_num = 5;
+		$this->asteroid_num = 8;
 		for ($i=1; $i < $this->asteroid_num + 1; $i++) { 
 					$this->asteroid[$i] = new Asteroid;
 				}	
@@ -23,7 +23,9 @@ class Playfield
 		$this->asteroid[3]->setXY(50, 45);		
 		$this->asteroid[4]->setXY(100, 60);		
 		$this->asteroid[5]->setXY(50, 75);			
-
+		$this->asteroid[6]->setXY(75, 25);		
+		$this->asteroid[7]->setXY(75, 50);		
+		$this->asteroid[8]->setXY(75, 75);	
 	}
 
 	public function Show()
