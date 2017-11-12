@@ -18,6 +18,10 @@ class BigShip extends BaseShip
 	{
 		$this->base_speed = 1;
 	}
+	protected function setWeapon()
+	{
+		$this->weapon = new Anigilator;
+	}
 	public function Shoot()
 	{
 		return 4;
